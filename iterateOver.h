@@ -17,6 +17,7 @@ void iterateOverChars(string input, string salt, char *crackAttempt, int charInd
         for (char c = 'a'; c <= 'z'; c++)
         {
             crackAttempt[charIndex] = c;
+	    printf("c = %c \n", c);
             // Recurse
             iterateOverChars(input, salt, crackAttempt, charIndex + 1, len);
             // Recursive return
@@ -24,6 +25,7 @@ void iterateOverChars(string input, string salt, char *crackAttempt, int charInd
         }
         for (char c = 'A'; c <= 'Z'; c++)
         {
+	    printf("c = %c \n", c);
             crackAttempt[charIndex] = c;
             // Recurse
             iterateOverChars(input, salt, crackAttempt, charIndex + 1, len);
